@@ -4,7 +4,9 @@
   "description": "A project to create a node api which will be consumed by the react cms/blog/portfolio application and provide it with content and settings which the user can configure.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "cd client && npm run dev-server",
+    "server": "nodemon server/server.js",
+    "start": "concurrently - kill-others \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -17,8 +19,11 @@
   },
   "homepage": "https://github.com/datorman/Node-React-CMS#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
     "express": "^4.16.4",
-    "mongodb": "^3.1.10",
-    "mongoose": "^5.4.0"
+    "lodash": "^4.17.11",
+    "mongodb": "^3.1.12",
+    "mongoose": "^5.4.5"
   }
 }
