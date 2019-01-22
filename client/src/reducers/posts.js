@@ -1,19 +1,19 @@
 // Posts reducer
-const postsReducerDefaultState = [];
+const blogReducerDefaultState = [];
 
-export default (state = postsReducerDefaultState, action)=> {
+export default (state = blogReducerDefaultState, action)=> {
     switch(action.type){
-        case 'ADD_POST':
+        case 'ADD_BLOG':
             return [
                 ...state,
-                action.post
+                action.blog
             ];
         case 'REMOVE_POST':
             //return the removed post
         case 'EDIT_POST':
             //Edit the post
         case 'SET_POSTS':
-            return action.posts;
+            return action.blogs;
         default:
             return state;
     }

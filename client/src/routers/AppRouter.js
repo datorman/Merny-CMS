@@ -9,6 +9,7 @@ import PublicRoute from './PublicRoute';
 import HomePage from './../components/HomePage';
 import BlogsPage from './../components/BlogsPage';
 import BlogView from './../components/BlogView';
+import BlogForm from './../components/BlogForm';
 
 export const history = createHistory();
 
@@ -27,8 +28,13 @@ const AppRouter = () =>(
                     exact={true}
                 />
                 <PublicRoute
-                    path="/blog/:id"
+                    path="/blog/view/:id"
                     component={BlogView}
+                    exact={true}
+                />
+                <PublicRoute
+                    path="/blog/create"
+                    component={BlogForm}
                     exact={true}
                 />
                 <PublicRoute 

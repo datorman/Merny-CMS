@@ -7,14 +7,14 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import LoadingPage from './components/LoadingPage';
-import posts from './dev-fixtures/posts';
+import blogs from './dev-fixtures/posts';
 
 
 const store = configureStore();
-console.log(posts);
+console.log(blogs);
 store.dispatch({
-    type:'SET_POSTS',
-    posts
+    type:'SET_BLOGS',
+    blogs
 });
 
 console.log(store.getState());

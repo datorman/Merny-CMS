@@ -1,5 +1,5 @@
 import moment from 'moment';
 
-export default (posts) => {
-    return posts;
+export default (blogs) => {
+    return blogs;
 };
