@@ -4,6 +4,12 @@ const jwt = require('jsonwebtoken');
 const _ = require('lodash');
 const bcrypt = require('bcryptjs');
 
+// TODO: add device to each token. If the device making the request does not match the token force the expiration of this token 
+// device: {
+//     type: String,
+//     required: true
+// }
+
 
 var UserSchema = new mongoose.Schema({
     email:{
